@@ -14,6 +14,8 @@
 
     <!-- Custom styles for this template -->
     <link href="lib/css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+
   </head>
 
   <body>
@@ -22,6 +24,7 @@
 <!--      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">-->
 <!--      <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
+                  <th>Graduados</th>
          <a class="nav-link" href="#">Rector</a>
           <a class="nav-link" href="#">Consejeros Superiores</a>
           <a class="nav-link" href="#">Decanos</a>
@@ -29,16 +32,15 @@
         </li>
       </ul>-->
     </nav>
-
     <div class="container-fluid">
       <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar collapse n">
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link" href="#">
                   <span data-feather="home"></span>
-                  Universidad <span class="sr-only">(current)</span>
+                  Universidad
                 </a>
               </li>
               <li class="nav-item">
@@ -66,9 +68,9 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="faif.html">
+                <a class="nav-link active" href="faif.html">
                   <span data-feather="layers"></span>
-                  FAIF
+                  FAIF  <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -162,11 +164,20 @@
   </button>
   <div class="dropdown-menu">
     <a class="dropdown-item" href="#"><span data-feather="users"></span> Rector</a>
-    <a class="dropdown-item" href="#">Consejeros Superiores</a>
+    <a class="dropdown-item" href="#graduados">Consejeros Superiores</a>
     <a class="dropdown-item" href="#">Decanos</a>
     <a class="dropdown-item" href="#">Consejeros Directivos</a>
   </div>
 </div>
+<div class="btn-group mr-2">
+                <button class="btn btn-sm btn-outline-secondary">Total</button>
+                <button class="btn btn-sm btn-outline-secondary" href="#graduados">Graduados</button>
+                <button class="btn btn-sm btn-outline-secondary">No Docentes</button>
+                <button class="btn btn-sm btn-outline-secondary">Estudiantes</button>
+                <button class="btn btn-sm btn-outline-secondary">Docentes</button>
+              </div>
+
+
             
             
             <div class="btn-toolbar mb-2 mb-md-0">
@@ -176,20 +187,13 @@
                 Rector
   
              </button>-->
-            <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Total</button>
-                <button class="btn btn-sm btn-outline-secondary">Graduados</button>
-                <button class="btn btn-sm btn-outline-secondary">No Docentes</button>
-                <button class="btn btn-sm btn-outline-secondary">Estudiantes</button>
-                <button class="btn btn-sm btn-outline-secondary">Docentes</button>
-              </div>
-             
+                         
             </div>
           </div>
 
           <canvas class="my-4 w-100" id="myChart" width="900" height="200"></canvas>
 
-          <h2>Votos Ponderados Rector Universidad</h2>
+          <h2>Votos Ponderados Rector FAIF</h2>
           <div class="table-responsive">
             <table class="table table-striped table-sm">
               <thead>
@@ -198,7 +202,6 @@
                   <th>Graduados</th>
                   <th>No Docentes</th>
                   <th>Estudiantes</th>
-                  <th>Graduados</th>
                   <th>Total</th>
                 </tr>
               </thead>
@@ -235,36 +238,33 @@
                   <td>3</td>
                   <td>7</td>
                 </tr>
-                
+                <tr>
+                  <td>Total</td>
+                  <td>1</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>8</td>
+                  <td>16</td>
+                </tr>
               </tbody>
             </table>
           </div>
-          <h2 id="graduados">Votos Graduados Rector</h2>
+          <h2 id="graduados">Votos Graduados Rector FAIF</h2>
           <div class="table-responsive">
             <table class="table table-striped table-sm">
               <thead>
                 <tr>
-                  <th>Unidades</th>
-                  <th>Empadronados</th>
-                  <th>Votantes</th>
-                  <th>Lista 1</th>
-                  <th>Lista 2</th>
-                  <th>Lista 3</th>
-                  <th>Lista 4</th>
-                  <th>Lista 5</th>
-                  <th>Lista 6</th>
-                  <th>Lista 7</th>
-                  <th>Lista 8</th>
-                  <th>Blancos</th>
-                  <th>Nulos</th>
-                  <th>Recurridos</th>
-                  
+                  <th>Listas</th>
+                  <th>Sede 1</th>
+                  <th>Sede 2</th>
+                  <th>Total Votos</th>
+                  <th>Votos Ponderados</th>
                   
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>FACE</td>
+                  <td>Lista 1</td>
                   <td>1</td>
                   <td>1</td>
                   <td>2</td>
@@ -346,8 +346,23 @@
               </tbody>
             </table>
           </div>
-
-          
+          <h2 id="nodocentes">Votos No Docentes Rector FAIF</h2>
+          <div class="table-responsive">
+            <table id="tabla_nodocentes" class="table table-striped table-sm"
+                   >
+              <thead>
+                <tr>
+                  <th data-field="lista">Listas</th>
+                  <th data-field="sede1">Sede 1</th>
+                  <th data-field="sede2">Sede 2</th>
+                  <th data-field="total">Total Votos</th>
+                  <th data-field="ponderados">Votos Ponderados</th>
+                  
+                </tr>
+              </thead>
+              
+            </table>
+          </div>
         </main>
       </div>
     </div>
@@ -365,11 +380,76 @@
     <script>
       feather.replace()
     </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
 
     <!-- Graphs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script>
+
+            var $table = $('#tabla_nodocentes');
+    var mydata = 
+[
+    {
+        "lista": "Lista 1",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 0.5
         
+    },
+    {
+        "lista": "Lista 2",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 0.5
+    },
+    {
+        "lista": "Lista 2",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 0.5
+    },
+    {
+        "lista": "Blancos",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 0.5
+    },
+    {
+        "lista": "Nulos",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 0.5
+    },
+    {
+        "lista": "Recurridos",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 0.5
+    },
+    {
+        "lista": "Total",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 0.5
+    }
+    
+];
+
+maydata=$.getJSON('faif.json');
+$(function () {
+    $('#tabla_nodocentes').bootstrapTable({
+        
+        data: mydata
+    });
+    console.log(mydata);
+});
         
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
