@@ -1,483 +1,575 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="favicon.ico">
 
-    <title>Elecciones Universidad Nacional del Comahue</title>
+        <title>Elecciones Universidad Nacional del Comahue</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="lib/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="lib/css/dashboard.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+        <!-- Custom styles for this template -->
+        <link href="lib/css/dashboard.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
 
-  </head>
+    </head>
 
-  <body>
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Elecciones UNCOMA</a>
-<!--      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">-->
-<!--      <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-                  <th>Graduados</th>
-         <a class="nav-link" href="#">Rector</a>
-          <a class="nav-link" href="#">Consejeros Superiores</a>
-          <a class="nav-link" href="#">Decanos</a>
-          <a class="nav-link" href="#">Consejeros Directivos</a>
-        </li>
-      </ul>-->
-    </nav>
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar collapse n">
-          <div class="sidebar-sticky">
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="home"></span>
-                  Universidad
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                   <span data-feather="layers"></span>
-                    RECTORADO
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                   <span data-feather="layers"></span>
-                    AUZA
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                   <span data-feather="layers"></span>
-                    ASMA
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span data-feather="layers"></span>
-                  FACA
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="faif.html">
-                  <span data-feather="layers"></span>
-                  FAIF  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
-                  CRUB
-                </a>
-              </li>
+    <body>
 
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
-                  CUZA
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
-                  FACE
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
-                  FALE
-                </a>
-              </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
-                  FAIN
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
-                  FATU
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
-                  FAAS
-                </a>
-              </li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Elecciones Universidad</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
-                  FAEA
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
-                  FATA
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
-                  FAME
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
-                  ESCM
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
-                  FADE
-                </a>
-              </li>
 
-            </ul>
-          </div>
+
+
+            <div class="collapse navbar-collapse " id="navbarNav" >
+                <ul class="navbar-nav">
+
+                    <li class="nav-item active">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span data-feather="home"></span>Unidad Electoral
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item-active" href="#"><span data-feather="users"></span> Universidad</a>
+                                <a class="dropdown-item" href="#graduados">Administración Central</a>
+                                <a class="dropdown-item" href="#" onclick="actualizar('ua', 'faif')">FAIF</a>
+                                <a class="dropdown-item" href="#" onclick="actualizar('ua', 'faea')">FAEA</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item ">          
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span data-feather="users"></span>  Categoria
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Rector</a>
+                                <a class="dropdown-item" href="#graduados">Consejeros Superiores</a>
+                                <a class="dropdown-item" href="#">Decanos</a>
+                                <a class="dropdown-item" href="#">Consejeros Directivos</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item ">          
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span data-feather="users"></span>  Calustro
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#"> Todos</a>
+                                <a class="dropdown-item" href="#graduados">Graduados</a>
+                                <a class="dropdown-item" href="#">Estudiantes</a>
+                                <a class="dropdown-item" href="#">No Docentes</a>
+                                <a class="dropdown-item" href="#">Docentes</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-<!--            <h1 class="h2">Rector Universidad</h1>-->
-            
-            <!-- Example single danger button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Rector
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#"><span data-feather="users"></span> Rector</a>
-    <a class="dropdown-item" href="#graduados">Consejeros Superiores</a>
-    <a class="dropdown-item" href="#">Decanos</a>
-    <a class="dropdown-item" href="#">Consejeros Directivos</a>
-  </div>
-</div>
-<div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Total</button>
-                <button class="btn btn-sm btn-outline-secondary" href="#graduados">Graduados</button>
-                <button class="btn btn-sm btn-outline-secondary">No Docentes</button>
-                <button class="btn btn-sm btn-outline-secondary">Estudiantes</button>
-                <button class="btn btn-sm btn-outline-secondary">Docentes</button>
-              </div>
 
+        <!--        <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+                    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Elecciones UNCOMA</a>
+                          <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+                          <ul class="navbar-nav px-3">
+                            <li class="nav-item text-nowrap">
+                                      <th>Graduados</th>
+                             <a class="nav-link" href="#">Rector</a>
+                              <a class="nav-link" href="#">Consejeros Superiores</a>
+                              <a class="nav-link" href="#">Decanos</a>
+                              <a class="nav-link" href="#">Consejeros Directivos</a>
+                            </li>
+                          </ul>
+                </nav>-->
+        <!--        <div class="container-fluid">
+                    <div class="row">
+                        <nav class="col-md-2 d-none d-md-block bg-light sidebar collapse n ">
+                            <div class="sidebar-sticky">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="home"></span>
+                                            Universidad
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            RECTORADO
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            AUZA
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            ASMA
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            FACA
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="faif.html" onclick="actualizar('faif.json')">
+                                            <span data-feather="layers"></span>
+                                            FAIF  <span class="sr-only">(current)</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            CRUB
+                                        </a>
+                                    </li>
+        
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            CUZA
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            FACE
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            FALE
+                                        </a>
+                                    </li>
+        
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            FAIN
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            FATU
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            FAAS
+                                        </a>
+                                    </li>
+        
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#" onclick="actualizar('faea.json')">
+                                            <span data-feather="layers"></span>
+                                            FAEA
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            FATA
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            FAME
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            ESCM
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <span data-feather="layers"></span>
+                                            FADE
+                                        </a>
+                                    </li>
+        
+                                </ul>
+                            </div>
+                        </nav>
+        
+                        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                                            <h1 class="h2">Rector Universidad</h1>
+        
+                                 Example single danger button 
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Rector
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#"><span data-feather="users"></span> Rector</a>
+                                        <a class="dropdown-item" href="#graduados">Consejeros Superiores</a>
+                                        <a class="dropdown-item" href="#">Decanos</a>
+                                        <a class="dropdown-item" href="#">Consejeros Directivos</a>
+                                    </div>
+                                </div>
+                                <div class="btn-group mr-2">
+                                    <button class="btn btn-sm btn-outline-secondary">Total</button>
+                                    <button class="btn btn-sm btn-outline-secondary" href="#graduados">Graduados</button>
+                                    <button class="btn btn-sm btn-outline-secondary">No Docentes</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Estudiantes</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Docentes</button>
+                                </div>
+        
+        
+        
+        
+                                <div class="btn-toolbar mb-2 mb-md-0">
+                                                 <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                                    
+                                                     <span data-feather="calendar"></span>
+                                                    Rector
+                                      
+                                                 </button>
+        
+                                </div>
+                            </div>-->
 
-            
-            
-            <div class="btn-toolbar mb-2 mb-md-0">
-<!--             <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-
-                 <span data-feather="calendar"></span>
-                Rector
-  
-             </button>-->
-                         
-            </div>
-          </div>
-
-          <canvas class="my-4 w-100" id="myChart" width="900" height="200"></canvas>
-
-          <h2>Votos Ponderados Rector FAIF</h2>
-          <div class="table-responsive">
-            <table class="table table-striped table-sm">
-              <thead>
-                <tr>
-                  <th>Listas</th>
-                  <th>Graduados</th>
-                  <th>No Docentes</th>
-                  <th>Estudiantes</th>
-                  <th>Total</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Lista 1</td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>1</td>
-                  <td>3</td>
-                  <td>7</td>
-                </tr>
-                <tr>
-                  <td>Lista 1</td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>1</td>
-                  <td>3</td>
-                  <td>7</td>
-                </tr>
-                <tr>
-                  <td>Lista 1</td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>1</td>
-                  <td>3</td>
-                  <td>7</td>
-                </tr>
-                <tr>
-                  <td>Lista 1</td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>1</td>
-                  <td>3</td>
-                  <td>7</td>
-                </tr>
-                <tr>
-                  <td>Total</td>
-                  <td>1</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>8</td>
-                  <td>16</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h2 id="graduados">Votos Graduados Rector FAIF</h2>
-          <div class="table-responsive">
-            <table class="table table-striped table-sm">
-              <thead>
-                <tr>
-                  <th>Listas</th>
-                  <th>Sede 1</th>
-                  <th>Sede 2</th>
-                  <th>Total Votos</th>
-                  <th>Votos Ponderados</th>
-                  
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Lista 1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>0.3</td>
-                  
-                </tr>
-                <tr>
-                  <td>Lista 2</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>0.3</td>
-                  
-                </tr>
-                <tr>
-                  <td>Lista 3</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>0.3</td>
-                  
-                </tr>
-                <tr>
-                  <td>Lista 4</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>Lista 4</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>Blancos</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <th>Total Votos Válidos</th>
-                  <th>10</th>
-                  <th>0</th>
-                  <th>10</th>
-                  <th>0</th>
-                </tr>
-                <tr>
-                  <td>Nulos</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td>Recurridos</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <th>Total Votantes</th>
-                  <th>10</th>
-                  <th>0</th>
-                  <th>10</th>
-                  <th>0</th>
-                </tr>
-                <tr>
-                  <th>Empadronados</th>
-                  <th>100</th>
-                  <th>100</th>
-                  <th>200</th>
-                  <th>0</th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h2 id="nodocentes">Votos No Docentes Rector FAIF</h2>
-          <div class="table-responsive">
+        <!--                    <canvas class="my-4 w-100" id="myChart" width="900" height="200"></canvas>-->
+        <!--
+                            <h2>Votos Ponderados Rector FAIF</h2>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Listas</th>
+                                            <th>Graduados</th>
+                                            <th>No Docentes</th>
+                                            <th>Estudiantes</th>
+                                            <th>Docentes</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Lista 1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>3</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lista 1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>3</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lista 1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>3</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lista 1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>3</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>1</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>8</td>
+                                            <td>16</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h2 id="graduados">Votos Graduados Rector FAIF</h2>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Listas</th>
+                                            <th>Sede 1</th>
+                                            <th>Sede 2</th>
+                                            <th>Total Votos</th>
+                                            <th>Votos Ponderados</th>
+        
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Lista 1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>0.3</td>
+        
+                                        </tr>
+                                        <tr>
+                                            <td>Lista 2</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>0.3</td>
+        
+                                        </tr>
+                                        <tr>
+                                            <td>Lista 3</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>0.3</td>
+        
+                                        </tr>
+                                        <tr>
+                                            <td>Lista 4</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lista 4</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Blancos</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total Votos Válidos</th>
+                                            <th>10</th>
+                                            <th>0</th>
+                                            <th>10</th>
+                                            <th>0</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Nulos</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Recurridos</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total Votantes</th>
+                                            <th>10</th>
+                                            <th>0</th>
+                                            <th>10</th>
+                                            <th>0</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Empadronados</th>
+                                            <th>100</th>
+                                            <th>100</th>
+                                            <th>200</th>
+                                            <th>0</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>-->
+        <h2 id="nodocentes">Votos No Docentes Rector FAIF</h2>
+        <div class="table-responsive">
             <table id="tabla_nodocentes" class="table table-striped table-sm"
+                   data-show-refresh="true"
+                   data-show-export="true"
                    >
-              <thead>
-                <tr>
-                  <th data-field="lista">Listas</th>
-                  <th data-field="sede1">Sede 1</th>
-                  <th data-field="sede2">Sede 2</th>
-                  <th data-field="total">Total Votos</th>
-                  <th data-field="ponderados">Votos Ponderados</th>
-                  
-                </tr>
-              </thead>
-              
+<!--                <thead>
+                    <tr>
+                        <th data-field="lista">Listas</th>
+                        <th data-field="sede1">Sede 1</th>
+                        <th data-field="sede2">Sede 2</th>
+                        <th data-field="total">Total Votos</th>
+                        <th data-field="ponderados">Votos Ponderados</th>
+
+                    </tr>
+                </thead>-->
+
             </table>
-          </div>
-        </main>
-      </div>
-    </div>
+        </div>
+    </main>
+</div>
+</div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="lib/js/jquery-slim.min.js"><\/script>')</script>
-    <script src="lib/js/popper.min.js"></script>
-    <script src="lib/js/bootstrap.min.js"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="lib/js/jquery-slim.min.js"><\/script>')</script>
+<script src="lib/js/popper.min.js"></script>
+<script src="lib/js/bootstrap.min.js"></script>
 
-    <!-- Icons -->
-    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-    <script>
-      feather.replace()
-    </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+<!-- Icons -->
+<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+<script>
+                            feather.replace()
+</script>
+<script src="lib/js/bootstrap-table.min.js"></script>
+<!--        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js"></script>-->
+<!-- Graphs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script>
+                            var ua = 'todas';//sigrlas todas,admc,faif....
+                            var claustro = 't'; //n,e,g,d,t=total
+                            var categoria = 're';//re,de,cd,cs
+                            var jsonResult=[];
 
-    <!-- Graphs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-    <script>
+                            function actualizar(variable, valor) {
+                                if (variable == 'ua') {
+                                    ua = valor;
+                                } else if (variable == 'claustro') {
+                                    claustro = valor;
+                                } else if (variable == 'categoria') {
+                                    categoria = valor;
+                                } else
+                                    console.log('Error variable inexistente');
 
-            var $table = $('#tabla_nodocentes');
-    var mydata = 
-[
-    {
-        "lista": "Lista 1",
-        "sede1": 1,
-        "sede2": 2,
-        "total": 3,
-        "ponderados": 0.5
-        
-    },
-    {
-        "lista": "Lista 2",
-        "sede1": 1,
-        "sede2": 2,
-        "total": 3,
-        "ponderados": 0.5
-    },
-    {
-        "lista": "Lista 2",
-        "sede1": 1,
-        "sede2": 2,
-        "total": 3,
-        "ponderados": 0.5
-    },
-    {
-        "lista": "Blancos",
-        "sede1": 1,
-        "sede2": 2,
-        "total": 3,
-        "ponderados": 0.5
-    },
-    {
-        "lista": "Nulos",
-        "sede1": 1,
-        "sede2": 2,
-        "total": 3,
-        "ponderados": 0.5
-    },
-    {
-        "lista": "Recurridos",
-        "sede1": 1,
-        "sede2": 2,
-        "total": 3,
-        "ponderados": 0.5
-    },
-    {
-        "lista": "Total",
-        "sede1": 1,
-        "sede2": 2,
-        "total": 3,
-        "ponderados": 0.5
-    }
-    
-];
+                                json = ua + categoria + claustro + '.json';
+                                $(function () {
 
-maydata=$.getJSON('faif.json');
-$(function () {
-    $('#tabla_nodocentes').bootstrapTable({
-        
-        data: mydata
-    });
-    console.log(mydata);
-});
-        
-      var ctx = document.getElementById("myChart");
-      var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ["Lista 1", "Lista 2", "Lista 3", "Lista 4", "Lista 5", "Lista 6", "Lista 7", "Lista 8", "Lista 9", "Blancos"],
-          datasets: [{
-            data: [32, 13, 14, 16, 3, 20, 2, 3, 20, 2],
-            lineTension: 0,
-            backgroundColor: '#007bff',
-            borderColor: '#007bff',
-            borderWidth: 4,
-            pointBackgroundColor: '#007bff'
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: false
-              }
-            }]
-          },
-          legend: {
-            display: false,
-          }
-        }
-      });
-    </script>
-  </body>
+                                    $('#tabla_nodocentes').bootstrapTable('destroy');
+                                    $('#tabla_nodocentes').bootstrapTable( {
+                                        url: 'json/' + json,
+                                    columns: [{
+                                        field: 'lista',
+                                        title: 'Listas',
+                                        sortable: 'false'
+
+                                        },
+//                                    {
+//                                        field: 'sede1',
+//                                        title: 'Sede 1',
+//                                        sortable: 'false'
+//                                    }, 
+                                    {
+                                        field: 'sede2',
+                                        title: 'Sede 2'
+                                    }, {
+                                        field: 'total',
+                                        title: 'Total'
+                                    }, {
+                                        field: 'ponderados',
+                                        title: 'Ponderadoss'
+                                    }]
+                                                //data: mydata
+                                    });
+                                    console.log(json);
+                                });
+
+                            }
+                            //var $table = $('#tabla_nodocentes');
+
+
+                            //$.ajax({
+                            //      url: 'faif.json',
+                            //      dataType: 'json',
+                            //      success: function(data) {
+                            //        var jsonResult = JSON.stringify(data);
+                            //        $('#tabla_nodocentes').bootstrapTable({
+                            //        //url:'faif.json'
+                            //        //console.log(data);
+                            //        data: unescape(jsonResult)
+                            //    });
+                            //      }});
+
+                            $(function () {
+                                
+                                json = ua + categoria + claustro + '.json';
+                                
+                                $.ajax({
+                                  url: 'json/'+json,
+                                  dataType: 'json',
+                                  success: function(data) {
+                                    console.log(data);
+                                    $('#tabla_nodocentes').bootstrapTable({
+                                    cache: false,
+                                    data: data.data,//'json/' + json,
+                                    columns: data.columns
+                                            //data: mydata
+                                });
+                                    //console.log(data);
+                                    
+                                }});
+                                
+                                
+                            });
+                            /*
+                             var ctx = document.getElementById("myChart");
+                             var myChart = new Chart(ctx, {
+                             type: 'bar',
+                             data: {
+                             labels: ["Lista 1", "Lista 2", "Lista 3", "Lista 4", "Lista 5", "Lista 6", "Lista 7", "Lista 8", "Lista 9", "Blancos"],
+                             datasets: [{
+                             //url: 'json/faif2.json',
+                             data: [32, 13, 14, 16, 3, 20, 2, 3, 20, 2],
+                             lineTension: 0,
+                             backgroundColor: '#007bff',
+                             borderColor: '#007bff',
+                             borderWidth: 4,
+                             pointBackgroundColor: '#007bff'
+                             }]
+                             },
+                             options: {
+                             scales: {
+                             yAxes: [{
+                             ticks: {
+                             beginAtZero: false
+                             }
+                             }]
+                             },
+                             legend: {
+                             display: false,
+                             }
+                             }
+                             });
+                             */
+</script>
+</body>
 </html>

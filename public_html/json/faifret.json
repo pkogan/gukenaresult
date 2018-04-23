@@ -1,0 +1,53 @@
+[
+    {
+        "lista": "Lista 1",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 30
+        
+    },
+    {
+        "lista": "Lista 2",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 0.5
+    },
+    {
+        "lista": "Lista 2",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 0.5
+    },
+    {
+        "lista": "Blancos",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 0.5
+    },
+    {
+        "lista": "Nulos",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 0.5
+    },
+    {
+        "lista": "Recurridos",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 0.5
+    },
+    {
+        "lista": "Total",
+        "sede1": 1,
+        "sede2": 2,
+        "total": 3,
+        "ponderados": 0.5
+    }
+    
+]
