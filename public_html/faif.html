@@ -258,7 +258,7 @@
                                 </div>
                             </div>-->
 
-        <!--                    <canvas class="my-4 w-100" id="myChart" width="900" height="200"></canvas>-->
+        <canvas class="my-4 w-100" id="myChart" width="900" height="200"></canvas>
         <!--
                             <h2>Votos Ponderados Rector FAIF</h2>
                             <div class="table-responsive">
@@ -420,16 +420,16 @@
                    data-show-refresh="true"
                    data-show-export="true"
                    >
-<!--                <thead>
-                    <tr>
-                        <th data-field="lista">Listas</th>
-                        <th data-field="sede1">Sede 1</th>
-                        <th data-field="sede2">Sede 2</th>
-                        <th data-field="total">Total Votos</th>
-                        <th data-field="ponderados">Votos Ponderados</th>
-
-                    </tr>
-                </thead>-->
+                <!--                <thead>
+                                    <tr>
+                                        <th data-field="lista">Listas</th>
+                                        <th data-field="sede1">Sede 1</th>
+                                        <th data-field="sede2">Sede 2</th>
+                                        <th data-field="total">Total Votos</th>
+                                        <th data-field="ponderados">Votos Ponderados</th>
+                
+                                    </tr>
+                                </thead>-->
 
             </table>
         </div>
@@ -449,127 +449,138 @@
 <!-- Icons -->
 <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
 <script>
-                            feather.replace()
+                                    feather.replace()
 </script>
 <script src="lib/js/bootstrap-table.min.js"></script>
 <!--        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js"></script>-->
 <!-- Graphs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 <script>
-                            var ua = 'todas';//sigrlas todas,admc,faif....
-                            var claustro = 't'; //n,e,g,d,t=total
-                            var categoria = 're';//re,de,cd,cs
-                            var jsonResult=[];
+                                    var ua = 'todas';//sigrlas todas,admc,faif....
+                                    var claustro = 't'; //n,e,g,d,t=total
+                                    var categoria = 're';//re,de,cd,cs
+                                    var myChart;
+function llamada(){
+    json = ua + categoria + claustro + '.json';
+    $.ajax({
+                                            url: 'json/' + json,
+                                            dataType: 'json',
+                                            cache: false,
+                                            success: function (data) {
+                                                console.log(data);
+                                                $('#tabla_nodocentes').bootstrapTable({
+                                                    data: data.data, //'json/' + json,
+                                                    columns: data.columns
+                                                            //data: mydata
+                                                });
+                                                //console.log(data);
 
-                            function actualizar(variable, valor) {
-                                if (variable == 'ua') {
-                                    ua = valor;
-                                } else if (variable == 'claustro') {
-                                    claustro = valor;
-                                } else if (variable == 'categoria') {
-                                    categoria = valor;
-                                } else
-                                    console.log('Error variable inexistente');
+                                                actualizargrafico(data);
 
-                                json = ua + categoria + claustro + '.json';
-                                $(function () {
+                                            }});
 
-                                    $('#tabla_nodocentes').bootstrapTable('destroy');
-                                    $('#tabla_nodocentes').bootstrapTable( {
-                                        url: 'json/' + json,
-                                    columns: [{
-                                        field: 'lista',
-                                        title: 'Listas',
-                                        sortable: 'false'
+}
+    function actualizargrafico(data){
+    
+                                                var ctx = document.getElementById("myChart");
 
-                                        },
-//                                    {
-//                                        field: 'sede1',
-//                                        title: 'Sede 1',
-//                                        sortable: 'false'
-//                                    }, 
-                                    {
-                                        field: 'sede2',
-                                        title: 'Sede 2'
-                                    }, {
-                                        field: 'total',
-                                        title: 'Total'
-                                    }, {
-                                        field: 'ponderados',
-                                        title: 'Ponderadoss'
-                                    }]
-                                                //data: mydata
-                                    });
-                                    console.log(json);
-                                });
+                                                myChart = new Chart(ctx, {
+                                                    //$("#myChart").bootstrapChart({
+                                                    type: 'bar',
+                                                    data: {
+                                                        labels: data.labels, //["Lista 1", "Lista 2", "Lista 3", "Lista 4", "Lista 5", "Lista 6", "Lista 7", "Lista 8", "Lista 9", "Blancos"],
+                                                        datasets: [{
+                                                                //url: 'json/faif2.json',
+                                                                data: data.total, //[32, 13, 14, 16, 3, 20, 2, 3, 20, 2],
+                                                                lineTension: 0,
+                                                                backgroundColor: '#007bff',
+                                                                borderColor: '#007bff',
+                                                                borderWidth: 4,
+                                                                pointBackgroundColor: '#007bff'
+                                                            }]
+                                                    },
+                                                    options: {
+                                                        scales: {
+                                                            yAxes: [{
+                                                                    ticks: {
+                                                                        beginAtZero: true
+                                                                    }
+                                                                }]
+                                                        },
+                                                        legend: {
+                                                            display: false,
+                                                        }
+                                                    }
+                                                });
+}
+                                    function actualizar(variable, valor) {
+                                        if (variable == 'ua') {
+                                            ua = valor;
+                                        } else if (variable == 'claustro') {
+                                            claustro = valor;
+                                        } else if (variable == 'categoria') {
+                                            categoria = valor;
+                                        } else
+                                            console.log('Error variable inexistente');
 
-                            }
-                            //var $table = $('#tabla_nodocentes');
-
-
-                            //$.ajax({
-                            //      url: 'faif.json',
-                            //      dataType: 'json',
-                            //      success: function(data) {
-                            //        var jsonResult = JSON.stringify(data);
-                            //        $('#tabla_nodocentes').bootstrapTable({
-                            //        //url:'faif.json'
-                            //        //console.log(data);
-                            //        data: unescape(jsonResult)
-                            //    });
-                            //      }});
-
-                            $(function () {
-                                
-                                json = ua + categoria + claustro + '.json';
-                                
-                                $.ajax({
-                                  url: 'json/'+json,
-                                  dataType: 'json',
-                                  success: function(data) {
-                                    console.log(data);
-                                    $('#tabla_nodocentes').bootstrapTable({
-                                    cache: false,
-                                    data: data.data,//'json/' + json,
-                                    columns: data.columns
-                                            //data: mydata
-                                });
-                                    //console.log(data);
+                                        $('#tabla_nodocentes').bootstrapTable('destroy');
+//                                        $('#tabla_nodocentes').bootstrapTable({
+//                                            url: 'json/' + json,
+//                                            columns: [{
+//                                                    field: 'lista',
+//                                                    title: 'Listas',
+//                                                    sortable: 'false'
+//
+//                                                },
+//                                                {
+//                                                    field: 'sede1',
+//                                                    title: 'Sede 1',
+//                                                    sortable: 'false'
+//                                                },
+//                                                {
+//                                                    field: 'sede2',
+//                                                    title: 'Sede 2'
+//                                                }, {
+//                                                    field: 'total',
+//                                                    title: 'Total'
+//                                                }, {
+//                                                    field: 'ponderados',
+//                                                    title: 'Ponderadoss'
+//                                                }]
+//                                                    //data: mydata
+//                                        });
+                                        //$('#myChart').destroy();
+                                        myChart.destroy();
+                                        llamada();
+                                        //console.log(json);
+                                    }
                                     
-                                }});
-                                
-                                
-                            });
-                            /*
-                             var ctx = document.getElementById("myChart");
-                             var myChart = new Chart(ctx, {
-                             type: 'bar',
-                             data: {
-                             labels: ["Lista 1", "Lista 2", "Lista 3", "Lista 4", "Lista 5", "Lista 6", "Lista 7", "Lista 8", "Lista 9", "Blancos"],
-                             datasets: [{
-                             //url: 'json/faif2.json',
-                             data: [32, 13, 14, 16, 3, 20, 2, 3, 20, 2],
-                             lineTension: 0,
-                             backgroundColor: '#007bff',
-                             borderColor: '#007bff',
-                             borderWidth: 4,
-                             pointBackgroundColor: '#007bff'
-                             }]
-                             },
-                             options: {
-                             scales: {
-                             yAxes: [{
-                             ticks: {
-                             beginAtZero: false
-                             }
-                             }]
-                             },
-                             legend: {
-                             display: false,
-                             }
-                             }
-                             });
-                             */
+
+
+                                    //var $table = $('#tabla_nodocentes');
+
+
+                                    //$.ajax({
+                                    //      url: 'faif.json',
+                                    //      dataType: 'json',
+                                    //      success: function(data) {
+                                    //        var jsonResult = JSON.stringify(data);
+                                    //        $('#tabla_nodocentes').bootstrapTable({
+                                    //        //url:'faif.json'
+                                    //        //console.log(data);
+                                    //        data: unescape(jsonResult)
+                                    //    });
+                                    //      }});
+
+                                    $(function () {
+
+                                        
+                                        llamada();
+                                        
+
+                                    });
+
+
 </script>
 </body>
 </html>

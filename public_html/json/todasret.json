@@ -70,6 +70,8 @@
         }, {
         "field": "ponderados",
                 "title": "Ponderados"
-        }]
+        }],
+"labels":["Lista 1", "Lista 2", "Lista 3", "Lista 4", "Lista 5", "Lista 6", "Lista 7", "Lista 8", "Lista 9", "Blancos"],
+"total":[32, 13, 14, 16, 3, 20, 2, 3, 20, 2]
 
 }
